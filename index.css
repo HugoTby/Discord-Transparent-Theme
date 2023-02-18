@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap');
+@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/BlurpleRecolor/BlurpleRecolor.css');
+@import url('https://discord-custom-covers.github.io/usrbg/dist/usrbg.css');
+
+button {
+	--accentcolor: var(--accent-alt);
+}
+
+
+/* Root Variables */
+
+:root {
+	--font-primary: 'Karla', sans-serif;
+	--font-display: var(--font-primary) !important;
+	/* Dark Matter Variables */
+	--avatar-size: 32px;
+	--background-image: url('https://i.imgur.com/7SbtKvw.png');
+	--home-image: url('https://cliply.co/wp-content/uploads/2021/08/372108630_DISCORD_LOGO_BLACK_400.gif');
+	--accent: 37, 172, 232;
+	--accent-alt: 29, 101, 134;
+	--black: 0, 0, 0;
+	--white: 255, 255, 255;
+	/* BlurpleRecolor */
+	--accentcolor: var(--accent);
+	--vaccentcolor-hover: rgb(var(--accent));
+	--vaccentcolor-active: rgb(var(--accent));
+}
+
+.theme-dark,
+.theme-light {
+	/* Discord vars */
+	--background-primary: var(--background-solid);
+	--background-mobile-primary: var(--background-primary);
+	--background-secondary: var(--background-solid);
+	--background-mobile-secondary: var(--background-secondary);
+	--background-secondary-alt: var(--background-solid);
+	--background-tertiary: var(--background-solid);
+	--background-floating: var(--background-solid);
+	--background-secondary: var(--background-solid);
+	--background-accent: var(--background-solid);
+	--background-message-hover: rgba(var(--black), 0.4);
+	--channeltextarea-background: transparent;
+	--activity-card-background: rgba(var(--white), 0.05);
+	--deprecated-store-bg: transparent;
+	--background-modifier-hover: rgba(var(--black), 0.3);
+	--background-modifier-active: rgba(var(--black), 0.3);
+	--background-modifier-selected: rgba(var(--black), 0.6);
+	--elevation-low: inset 0 -1px 0 0 rgba(var(--black), 0.3);
+	--channels-default: rgba(var(--white), 0.3);
+	--deprecated-quickswitcher-input-background: var(--background-solid);
+	--header-primary: rgba(var(--white), 1);
+	--header-secondary: rgba(var(--white), 0.6);
+	--text-normal: rgba(var(--white), 0.6);
+	--text-muted: #8a8e94;
+	--interactive-muted: rgba(var(--white), 0.15);
+	--interactive-normal: rgba(var(--white), 0.5);
+	--interactive-hover: rgba(var(--white), 0.75);
+	--interactive-active: rgba(var(--white), 1);
+	--deprecated-card-bg: rgba(var(--white), 0.05);
+	--text-link: rgba(var(--accent), 1);
+	--focus-primary: rgba(var(--accent), 1);
+}
+
+::selection {
+	background-color: rgba(var(--accent-alt), 0.5);
+}
+
+
+/* Scrollbars */
+
+::-webkit-scrollbar {
+	width: 14px !important;
+}
+
+ ::-webkit-scrollbar-thumb {
+	border-radius: 8px !important;
+	border: 3px solid transparent !important;
+	background-color: rgba(var(--accent-alt), 1) !important;
+}
+
+ ::-webkit-scrollbar-track {
+	visibility: visible !important;
+	border-radius: 8px !important;
+	border: 3px solid transparent !important;
+	background-color: rgba(0, 0, 0, 0.3) !important;
+	background-clip: padding-box !important;
+}
+
+.none-2Eo-qx::-webkit-scrollbar {
+	display: none !important;
+}
+
+
+/* Titlebar */
+
+div[class*="typeWindows-"] {
+	--background-modifier-hover: rgba(var(--white), 0.05);
+	--background-modifier-active: rgba(var(--white), 0.075);
+	height: 26px;
+}
+
+div[class*="typeWindows-"]>div:first-child {
+	display: none;
+}
+
+div[class*="typeWindows-"]>div[role="button"] {
+	height: 30px;
+	width: 36px;
+}
+
+div[class*="typeWindows-"]::after {
+	content: 'Discord';
+	font-weight: 5000;
+	line-height: 31px;
+	color: var(--text-muted);
+	font-size: 14px;
+	position: absolute;
+	padding: 0 12px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	background: rgba(var(--black), 0.85);
+	z-index: -1;
+}
+
+
+/* Guilds */
+
+ul[data-list-id='guildsnav'] {
+	--background-secondary: var(--background-solid);
+    	--background-primary: rgba(var(--white), 0.1);
+	margin-bottom: 70px;
+	background-color: rgba(var(--black), 0.6);
+	border-right: 1px solid rgba(var(--black), 0.2);
+	box-shadow: inset -10px 0px 20px -10px rgba(var(--black), 0.3);
+}
+
+ul[data-list-id='guildsnav'] ::-webkit-scrollbar {
+	display: none;
+}
+
+ul[data-list-id='guildsnav']>div[dir] {
+	padding-top: 18px;
+}
+
+ul[data-list-id='guildsnav'] [class^="pill-"],
+ul[data-list-id='guildsnav'] [class^="pill-"]>div {
+	height: 40px !important;
+}
+
+ul[data-list-id='guildsnav'] div[style*="height: 56"],
+ul[id^="folder-items-"] {
+	height: auto !important;
+}
+
+ul[data-list-id='guildsnav'] [class^="pill-"] span {
+	width: 10px;
+	margin-left: -5px;
+	border-radius: 20px;
+}
+
+[data-list-id='guildsnav'] [class^="pill-"] span[style^="opacity: 1; height: 40"] {
+	--header-primary: rgba(var(--accent), 1);
+}
+
+span[class^="expandedFolderBackground-"] {
+	--background-secondary: rgba(var(--black), 0.25);
+	border-radius: 14px;
+	width: 40px;
+	left: 16px;
+}
+
+
+
+#app-mount [data-list-item-id="guildsnav___home"]>div {
+	color: transparent;
+	background-color: transparent;
+}
+
+div[data-list-item-id="guildsnav___create-join-button"],
+div[data-list-item-id="guildsnav___guild-discover-button"] {
+	transition: 150ms ease;
+	opacity: 0.5;
+	background-color: var(--background-solid) !important;
+	color: rgba(var(--white), 0.3) !important;
+	border: 1px dashed rgba(var(--white), 0.3);
+	border-radius: 50px;
+}
+
+div[data-list-item-id="guildsnav___create-join-button"]:hover,
+div[data-list-item-id="guildsnav___guild-discover-button"]:hover {
+	opacity: 1;
+}
+
+
+
+/* Sidebar Header */
+
+nav[aria-label]>div>header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 54px;
+	--background-accent: rgba(var(--accent), 1);
+	--background-modifier-hover: rgba(var(--black), 0.25);
+}
+
+
+
+
+div[class^='base-']>div,
+section[class*="themed-"] {
+	--background-secondary: rgba(var(--black), 0.5);
+	--background-tertiary: rgba(var(--white), 0.05);
+	--background-primary: rgba(var(--black), 0.5);
+}
+
+
+/* Tab Bar */
+
+div[class*="topPill"],
+nav>div[role="tablist"],
+.bd-tab-bar {
+	--background-accent: rgba(var(--accent));
+	--background-modifier-hover: rgba(var(--white), 0.05);
+	--background-modifier-active: rgba(var(--white), 0.075);
+	--background-modifier-selected: rgba(var(--accent), 0.25);
+}
+
+
+
+
+
+
+
+div[data-list-item-id="guildsnav___home"] {
+	background: var(--home-image) top center/110% no-repeat;
+}
+
+div[class^="unreadMentionsIndicatorBottom-"] {
+	bottom: 70px;
+}
+
+
+/* Settings */
+
+div[aria-label*="_SETTINGS"],
+div[aria-label*="_DEBUG"] {
+	--background-primary: transparent;
+	--background-secondary: rgba(var(--black), 0.7);
+}
+
+div[class^="sidebarRegionScroller-"]>nav {
+	--background-secondary: transparent;
+}
+
+div[class^="contentRegion-"] {
+	--background-primary: rgba(var(--black), 0.8);
+}
+
+div[class^="contentRegion-"] div[style^="overflow: hidden scroll"] {
+	background-color: transparent;
+	--background-primary: rgba(var(--black), 0.1);
+	--background-secondary: rgba(var(--black), 0.2);
+	--background-secondary-alt: rgba(var(--black), 0.25);
+	--background-tertiary: rgba(var(--white), 0.1);
+}
+
+div[aria-label*="_SETTINGS"] aside>div {
+	--background-primary: transparent;
+}
+
+div[aria-label*="_SETTINGS"] aside>div::-webkit-scrollbar-track {
+	visibility: hidden !important;
+}
+div[class*="topPill"],
+nav>div[role="tablist"],
+.bd-tab-bar {
+	--background-accent: rgba(var(--accent));
+	--background-modifier-hover: rgba(var(--white), 0.05);
+	--background-modifier-active: rgba(var(--white), 0.075);
+	--background-modifier-selected: rgba(var(--accent), 0.25);
+}
